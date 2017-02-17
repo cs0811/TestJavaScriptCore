@@ -14,6 +14,7 @@
 		D4316C5A1E56E48F008522D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4316C591E56E48F008522D2 /* Assets.xcassets */; };
 		D4316C5D1E56E48F008522D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4316C5B1E56E48F008522D2 /* LaunchScreen.storyboard */; };
 		D4316C661E56E4B0008522D2 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4316C651E56E4B0008522D2 /* JavaScriptCore.framework */; };
+		D4316C681E56E910008522D2 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = D4316C671E56E910008522D2 /* test.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D4316C5C1E56E48F008522D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4316C5E1E56E48F008522D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4316C651E56E4B0008522D2 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		D4316C671E56E910008522D2 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		D4316C4C1E56E48F008522D2 /* TestJavaScriptCore */ = {
 			isa = PBXGroup;
 			children = (
+				D4316C671E56E910008522D2 /* test.html */,
 				D4316C501E56E48F008522D2 /* AppDelegate.h */,
 				D4316C511E56E48F008522D2 /* AppDelegate.m */,
 				D4316C531E56E48F008522D2 /* ViewController.h */,
@@ -151,6 +154,7 @@
 			files = (
 				D4316C5D1E56E48F008522D2 /* LaunchScreen.storyboard in Resources */,
 				D4316C5A1E56E48F008522D2 /* Assets.xcassets in Resources */,
+				D4316C681E56E910008522D2 /* test.html in Resources */,
 				D4316C581E56E48F008522D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +325,7 @@
 				D4316C631E56E48F008522D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
