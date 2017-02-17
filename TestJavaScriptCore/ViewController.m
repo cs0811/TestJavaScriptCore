@@ -15,6 +15,10 @@ JSExportAs(log,
            - (void)ocLog:(NSString *)str
            );
 
+JSExportAs(myFunc,
+           - (void)myFunc:(JSValue *)value
+           );
+
 @end
 
 @interface ViewController ()<UIWebViewDelegate, WebExport>
@@ -43,6 +47,15 @@ JSExportAs(log,
 
 - (void)ocLog:(NSString *)str {
     NSLog(@"oc %@",str);
+}
+
+- (void)myFunc:(JSValue *)value {
+    NSString * text = [[value valueForProperty:@"text"] toString];//打印"这里是文字"
+    
+    JSValue * func =  [value valueForProperty:@"callbackFun"]; //这里是JS参数中的func;
+    
+    //调用这个函数
+    [func callWithArguments:@[@"这里是参数"]];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
