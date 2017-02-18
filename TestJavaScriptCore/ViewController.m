@@ -19,6 +19,10 @@ JSExportAs(myFunc,
            - (void)myFunc:(JSValue *)value
            );
 
+JSExportAs(func2,
+           - (void)func2:(NSString *)one two:(NSString *)two three:(NSString *)three
+           );
+
 @end
 
 @interface ViewController ()<UIWebViewDelegate, WebExport>
@@ -51,11 +55,15 @@ JSExportAs(myFunc,
 
 - (void)myFunc:(JSValue *)value {
     NSString * text = [[value valueForProperty:@"text"] toString];//打印"这里是文字"
-    
+    NSLog(@"%@",text);
     JSValue * func =  [value valueForProperty:@"callbackFun"]; //这里是JS参数中的func;
     
     //调用这个函数
     [func callWithArguments:@[@"这里是参数"]];
+}
+
+- (void)func2:(NSString *)one two:(NSString *)two three:(NSString *)three {
+    NSLog(@"%@ %@ %@",one, two, three);
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
@@ -93,7 +101,7 @@ JSExportAs(myFunc,
     // OC  ->  JS
     JSValue * fuction = self.context[@"fun1"];
     JSValue * result = [fuction callWithArguments:@[@2,@6]];
-    NSLog(@"..%@",[result toNumber]);
+    NSLog(@".. %@",[result toNumber]);
 }
 
 

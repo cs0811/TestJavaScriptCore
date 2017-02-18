@@ -56,6 +56,10 @@ function  myFunc({"text":"这里是文字","callbackFun":function(string){alert'
     
 };
 
+function  func2(one, two, three) {
+    
+};
+
 </script>
 
 </head>
@@ -90,10 +94,10 @@ function  myFunc({"text":"这里是文字","callbackFun":function(string){alert'
 <br/>
 <br/>
 
-<input type="button" value="addSubView" onclick="addSubView('view');" />
+<input type="button" value="addSubView" onclick="native.myFunc();" />
 <br/>
 <br/>
-<input type="button" value="多参数调用" onclick="mutiParams('参数1','参数2','参数3');" />
+<input type="button" value="多参数调用" onclick="native.func2('参数1','参数2','参数3');" />
 <br/>
 <br/>
 <a id="push" href="#" onclick="native.pushViewControllerTitle('SecondViewController','secondPushedFromJS');">
